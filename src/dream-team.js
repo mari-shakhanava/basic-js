@@ -9,12 +9,12 @@ module.exports = function createDreamTeam( members) {
               return x;
           }});
       membersCorrectOnlyLettersSorted = membersCorrect.map( function (t) {
-        return t.split(' ').sort().join('');
+        return t.split(' ').join('');
       });
       dreamTeamNameArr = membersCorrectOnlyLettersSorted.map( function (y) {
         return y.toUpperCase().slice(0,1);
       });
-      return dreamTeamName = dreamTeamNameArr.join('');
+      return dreamTeamName = dreamTeamNameArr.sort().join('');
 
   }
 
