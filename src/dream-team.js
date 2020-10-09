@@ -5,9 +5,10 @@ module.exports = function createDreamTeam( members) {
     return false;
   } else {
       membersCorrect = members.map( function(x) {
-          if (typeof x === 'string') {
+          if (typeof x === 'string' && x!= undefined ) {
               return x;
-          }});
+          } else return x ='';
+      });
       membersCorrectOnlyLettersSorted = membersCorrect.map( function (t) {
         return t.split(' ').join('');
       });
